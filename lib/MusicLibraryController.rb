@@ -71,7 +71,7 @@ class MusicLibraryController
     art = gets.strip
     artist = Artist.find_or_create_by_name(art)
     artist.songs.each do |song|
-      puts "#{num}. #{song.name}"
+      puts "#{num}. #{song.name} - #{song.genre}"
       num +=1
     end
   end
