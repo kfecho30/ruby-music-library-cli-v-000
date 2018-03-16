@@ -89,5 +89,6 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     list_songs
+    input = gets.strup
   end
 end
