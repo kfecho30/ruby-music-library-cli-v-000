@@ -70,6 +70,7 @@ class MusicLibraryController
     Artist.find_by_name(art).songs.each do |song|
       puts "#{num}. #{song.name}"
       num +=1
+    end
   end
 
 end
