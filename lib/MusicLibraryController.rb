@@ -1,3 +1,5 @@
+require 'pry'
+
 class MusicLibraryController
   attr_reader :path
   def initialize(path='./db/mp3s')
@@ -68,6 +70,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     art = gets.strip
     artist = Artist.find_by_name(art)
+    binding.pry
     artist.songs.each do |song|
       puts "#{num}. #{song.name}"
       num +=1
