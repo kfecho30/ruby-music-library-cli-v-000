@@ -81,7 +81,7 @@ class MusicLibraryController
     gen = gets.strip
     genre = Genre.find_or_create_by_name(gen).songs.sort_by {|song| song.name}
     genre.each do |song|
-      puts "#{num}. #{song.name} - #{song.artist.name}"
+      puts "#{num}. #{song.artist.name} - #{song.name}"
       num +=1
     end
   end
