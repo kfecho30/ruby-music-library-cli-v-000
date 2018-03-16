@@ -17,9 +17,9 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     #response = ""
-    puts "What would you like to do?"
-    response = gets.strip
-      while response != "exit"
+    while response != "exit"
+      puts "What would you like to do?"
+      response = gets.strip
         case response
         when "list songs"
           list_songs
